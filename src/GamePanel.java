@@ -18,8 +18,9 @@ public class GamePanel extends JPanel implements ActionListener {
     static final int SCREEN_HEIGHT = 750;
     static final int UNIT_SIZE = 50;
     static final int DELAY = 75; // snake speed, higher number = faster
-    final int[] x = new int[SCREEN_WIDTH/UNIT_SIZE]; // x-coordinates for snake body
-    final int[] y = new int[SCREEN_HEIGHT/UNIT_SIZE]; // y-coordinates for snake body
+    static final int GAME_UNITS = (SCREEN_WIDTH / UNIT_SIZE) * (SCREEN_HEIGHT / UNIT_SIZE);
+    final int[] x = new int[GAME_UNITS]; // x-coordinates for snake body
+    final int[] y = new int[GAME_UNITS]; // y-coordinates for snake body
     int bodyParts = 3;
     int applesEaten;
     int appleX;
